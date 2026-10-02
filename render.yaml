@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: supplygraph-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENVIRONMENT
+        value: production
+      - key: FRONTEND_ORIGINS
+        value: https://supplygraph-ai.onrender.com
+      - key: SNOWFLAKE_ACCOUNT
+        sync: false
+      - key: SNOWFLAKE_USER
+        sync: false
+      - key: SNOWFLAKE_PASSWORD
+        sync: false
+      - key: SNOWFLAKE_DATABASE
+        value: SUPPLYGRAPH
+      - key: SNOWFLAKE_SCHEMA
+        value: GOVERNANCE
+      - key: SNOWFLAKE_WAREHOUSE
+        value: SUPPLYGRAPH_WH
+      - key: SNOWFLAKE_ROLE
+        value: SUPPLYGRAPH_APP
+      - key: CORTEX_ENABLED
+        value: true
+      - key: CORTEX_MODEL
+        value: llama3.1-70b

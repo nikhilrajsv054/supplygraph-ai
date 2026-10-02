@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', 'Aptos', sans-serif;
+  color: #17211e;
+  background: #f4f6f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(30, 117, 109, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 117, 109, 0.028) 1px, transparent 1px),
+    #f4f6f3;
+  background-size: 32px 32px;
+}
+
+button, input, textarea { font: inherit; }
+button { letter-spacing: 0; }
+button:focus-visible, a:focus-visible, summary:focus-visible {
+  outline: 3px solid rgba(30, 117, 109, 0.3);
+  outline-offset: 2px;
+}
+::selection { color: #fff; background: #176b63; }
