@@ -41,7 +41,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import { api } from './api'
+import { api, ApiError } from './api'
 import {
   demoChatResponse,
   fallbackPartRisks,
@@ -155,9 +155,15 @@ export default function SupplyGraphApp() {
   const isConnecting = [summaryQuery, suppliersQuery, risksQuery].some(
     (query) => query.isPending,
   )
+  const unsupportedMessage =
+    chatMutation.error instanceof ApiError && chatMutation.error.status === 422
+      ? chatMutation.error.message
+      : null
   const assistantResult =
     chatMutation.data ??
-    (chatMutation.isError ? demoChatResponse(question, persona) : null)
+    (chatMutation.isError && !unsupportedMessage
+      ? demoChatResponse(question, persona)
+      : null)
 
   const handleAsk = (event: FormEvent) => {
     event.preventDefault()
@@ -624,7 +630,9 @@ export default function SupplyGraphApp() {
               </form>
 
               <div className="answer-panel" aria-live="polite">
-                {!assistantResult && !chatMutation.isPending && (
+                {!assistantResult &&
+                  !chatMutation.isPending &&
+                  !unsupportedMessage && (
                   <div className="answer-empty">
                     <MessageSquareText size={30} strokeWidth={1.5} />
                     <strong>Your answer will appear here</strong>
@@ -633,6 +641,11 @@ export default function SupplyGraphApp() {
                       included.
                     </span>
                   </div>
+                )}
+                {unsupportedMessage && !chatMutation.isPending && (
+                  <Alert severity="info" className="snapshot-alert">
+                    {unsupportedMessage}
+                  </Alert>
                 )}
                 {chatMutation.isPending && (
                   <div className="answer-empty">

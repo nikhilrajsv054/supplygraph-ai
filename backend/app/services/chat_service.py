@@ -141,8 +141,9 @@ class ChatService:
                 interpretation = self._intent_resolver.resolve(question)
                 if interpretation.metric_name == "UNSUPPORTED":
                     raise UnsupportedQuestionError(
-                        "Ask about delivery, inventory, fulfillment, quality, "
-                        "order impact, or landed cost."
+                        "I can help with governed supply-chain metrics. Ask "
+                        "about on-time delivery, delivery delay, defects, "
+                        "inventory, affected orders, fill rate, or landed cost."
                     )
                 metric_intent = self._METRIC_INTENTS.get(
                     interpretation.metric_name
@@ -218,8 +219,9 @@ class ChatService:
             )
 
         raise UnsupportedQuestionError(
-            "Ask about on-time delivery, delay, defects, inventory, affected "
-            "orders, fill rate, or landed cost"
+            "I can help with governed supply-chain metrics. Ask about on-time "
+            "delivery, delivery delay, defects, inventory, affected orders, "
+            "fill rate, or landed cost."
         )
 
     @staticmethod
