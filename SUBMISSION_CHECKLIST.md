@@ -25,6 +25,7 @@ Deadline: **4 October 2026, 11:59 PM IST**.
 - [x] Live Playwright integration test passing
 - [x] Dockerfile and Compose configuration included
 - [x] Render deployment blueprint included
+- [x] Vercel FastAPI and Vite deployments configured
 - [x] `.env` excluded from source control and Docker context
 - [x] Public errors do not expose Snowflake details
 - [x] Read-only `SUPPLYGRAPH_APP` runtime role verified with Cortex
@@ -45,12 +46,12 @@ Deadline: **4 October 2026, 11:59 PM IST**.
 - [x] Prepare clean browser-upload directory without local Git
 - [x] Scan upload directory for secrets and excluded runtime files
 - [x] Document GitHub and Render browser deployment steps
-- [ ] Create public GitHub repository
-- [ ] Upload clean source and documentation through GitHub UI
-- [ ] Deploy Docker service
-- [ ] Configure Snowflake secrets in hosting platform
-- [ ] Verify public health, dashboard, and chat endpoints
-- [ ] Add public repository and demo URLs to presentation
+- [x] Create public GitHub repository
+- [x] Upload clean source and documentation through GitHub UI
+- [x] Deploy FastAPI backend and Vite frontend
+- [x] Configure Snowflake secrets in hosting platform
+- [x] Verify public health, dashboard, and chat endpoints
+- [x] Add public repository and demo URLs to presentation
 
 ## Hackathon Submission
 

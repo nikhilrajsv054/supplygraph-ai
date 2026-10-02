@@ -58,7 +58,8 @@ Target duration: **4 minutes** plus questions.
 
 > Trust is enforced through 12 backend tests, a live browser flow, fixed SQL,
 > query tagging, runtime secrets, and the read-only SUPPLYGRAPH_APP role. A
-> multi-stage Docker image and Render blueprint provide the deployment path.
+> public Vercel deployments provide independently testable frontend and API
+> endpoints, with GitHub Actions retained as an additional deployment path.
 
 ## Slide 10 — Thank You (3:40–4:00)
 

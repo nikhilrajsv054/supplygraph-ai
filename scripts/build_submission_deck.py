@@ -502,7 +502,7 @@ def build_deck() -> None:
     add_bullets(engineering, ["Read-only SUPPLYGRAPH_APP role", "Query tag: SUPPLYGRAPH_AI", "Credentials only in runtime secrets"], 0.75, 3.72, 3.75, 0.78, size=9)
     add_panel(engineering, 5.05, 3.2, 4.5, 1.55)
     add_text(engineering, "DEPLOYMENT", 5.35, 3.42, 3.9, 0.28, size=10, color=TEAL, bold=True)
-    add_bullets(engineering, ["Multi-stage Docker image", "React + FastAPI on one origin", "Render blueprint + health check"], 5.35, 3.72, 3.9, 0.78, size=9)
+    add_bullets(engineering, ["FastAPI + Vite on Vercel", "Public health and dashboard checks", "GitHub Actions deployment path"], 5.35, 3.72, 3.9, 0.78, size=9)
 
     close = presentation.slides[9]
     clear_slide(close)
@@ -522,8 +522,9 @@ def build_deck() -> None:
         add_panel(close, left, 1.65, 2.72, 2.25)
         add_text(close, label, left + 0.22, 1.95, 2.28, 0.32, size=12, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
         add_text(close, detail, left + 0.3, 2.45, 2.12, 1.05, size=11, color=WHITE, align=PP_ALIGN.CENTER)
-    add_text(close, "NOVA-AgenticIQ  |  Nikhilraj SV  |  CoCo CLI Hackathon 2026", 0.75, 4.35, 8.5, 0.34, size=11, color=INK, bold=True, align=PP_ALIGN.CENTER)
-    add_text(close, "One network. One metric truth. Every answer evidenced.", 0.75, 4.72, 8.5, 0.34, size=13, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(close, "NOVA-AgenticIQ  |  Nikhilraj SV  |  CoCo CLI Hackathon 2026", 0.75, 4.18, 8.5, 0.28, size=10, color=INK, bold=True, align=PP_ALIGN.CENTER)
+    add_text(close, "One network. One metric truth. Every answer evidenced.", 0.75, 4.5, 8.5, 0.3, size=12, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(close, "LIVE  supplygraph-ai-web.vercel.app    |    CODE  github.com/nikhilrajsv054/supplygraph-ai", 0.65, 4.9, 8.7, 0.24, size=8, color=INK, bold=True, align=PP_ALIGN.CENTER)
 
     presentation.save(OUTPUT)
     print(f"Created {OUTPUT}")

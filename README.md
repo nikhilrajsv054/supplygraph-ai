@@ -9,6 +9,12 @@ canonical Snowflake supply-chain model.
 **Team leader:** Nikhilraj SV  
 **Team size:** 1
 
+## Live Deployment
+
+- Application: <https://supplygraph-ai-web.vercel.app>
+- API health: <https://supplygraph-ai.vercel.app/api/health>
+- Source: <https://github.com/nikhilrajsv054/supplygraph-ai>
+
 ## Why It Matters
 
 Supply-chain teams often calculate the same metric differently across
